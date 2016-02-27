@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8161B1E1C817C250099FAEF /* MediaCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C8161B1D1C817C250099FAEF /* MediaCard.m */; };
+		C8161B201C817F390099FAEF /* monkey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C8161B1F1C817F390099FAEF /* monkey.jpg */; };
+		C8161B231C8180A70099FAEF /* MediaCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8161B221C8180A70099FAEF /* MediaCardCell.m */; };
 		C8EF98271C7F0BBD0029EC90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF98261C7F0BBD0029EC90 /* main.m */; };
 		C8EF982A1C7F0BBD0029EC90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF98291C7F0BBD0029EC90 /* AppDelegate.m */; };
 		C8EF982D1C7F0BBD0029EC90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF982C1C7F0BBD0029EC90 /* ViewController.m */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8161B1C1C817C250099FAEF /* MediaCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaCard.h; sourceTree = "<group>"; };
+		C8161B1D1C817C250099FAEF /* MediaCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaCard.m; sourceTree = "<group>"; };
+		C8161B1F1C817F390099FAEF /* monkey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = monkey.jpg; sourceTree = "<group>"; };
+		C8161B211C8180A70099FAEF /* MediaCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaCardCell.h; sourceTree = "<group>"; };
+		C8161B221C8180A70099FAEF /* MediaCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaCardCell.m; sourceTree = "<group>"; };
 		C8EF98221C7F0BBD0029EC90 /* MVScreenshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVScreenshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EF98261C7F0BBD0029EC90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8EF98281C7F0BBD0029EC90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +66,7 @@
 		C8EF98241C7F0BBD0029EC90 /* MVScreenshot */ = {
 			isa = PBXGroup;
 			children = (
+				C8161B1F1C817F390099FAEF /* monkey.jpg */,
 				C8EF98281C7F0BBD0029EC90 /* AppDelegate.h */,
 				C8EF98291C7F0BBD0029EC90 /* AppDelegate.m */,
 				C8EF982B1C7F0BBD0029EC90 /* ViewController.h */,
@@ -67,6 +76,10 @@
 				C8EF98331C7F0BBD0029EC90 /* LaunchScreen.storyboard */,
 				C8EF98361C7F0BBD0029EC90 /* Info.plist */,
 				C8EF98251C7F0BBD0029EC90 /* Supporting Files */,
+				C8161B1C1C817C250099FAEF /* MediaCard.h */,
+				C8161B1D1C817C250099FAEF /* MediaCard.m */,
+				C8161B211C8180A70099FAEF /* MediaCardCell.h */,
+				C8161B221C8180A70099FAEF /* MediaCardCell.m */,
 			);
 			path = MVScreenshot;
 			sourceTree = "<group>";
@@ -110,6 +123,7 @@
 				TargetAttributes = {
 					C8EF98211C7F0BBD0029EC90 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = ZB4975XQ86;
 					};
 				};
 			};
@@ -136,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8161B201C817F390099FAEF /* monkey.jpg in Resources */,
 				C8EF98351C7F0BBD0029EC90 /* LaunchScreen.storyboard in Resources */,
 				C8EF98321C7F0BBD0029EC90 /* Assets.xcassets in Resources */,
 				C8EF98301C7F0BBD0029EC90 /* Main.storyboard in Resources */,
@@ -149,6 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8161B231C8180A70099FAEF /* MediaCardCell.m in Sources */,
+				C8161B1E1C817C250099FAEF /* MediaCard.m in Sources */,
 				C8EF982D1C7F0BBD0029EC90 /* ViewController.m in Sources */,
 				C8EF982A1C7F0BBD0029EC90 /* AppDelegate.m in Sources */,
 				C8EF98271C7F0BBD0029EC90 /* main.m in Sources */,
@@ -304,6 +321,7 @@
 				C8EF983B1C7F0BBD0029EC90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
