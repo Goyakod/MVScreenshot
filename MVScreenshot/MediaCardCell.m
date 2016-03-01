@@ -11,7 +11,7 @@
 @implementation MediaCardCell
 
 - (void)awakeFromNib {
-    // Initialization code
+
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -19,21 +19,18 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.contentView.frame = CGRectMake(0, 0, 250, 150);
+        self.contentView.frame = CGRectMake(0, 0, 500, 300);
         
-        self.reviewImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 230, 100)];
+        self.reviewImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 500, 250)];
         self.reviewImageView.image = [UIImage imageNamed:@"monkey.jpg"];
         self.reviewImageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:self.reviewImageView];
         
         self.nameLabel = [[UILabel alloc] init];
-        self.nameLabel.frame = CGRectMake(0, 120, 250, 30);
+        self.nameLabel.frame = CGRectMake(0, 260, 500, 30);
         self.nameLabel.text = @"默认Text";
         self.nameLabel.textAlignment = NSTextAlignmentCenter;
-        
-//        self.transform = CGAffineTransformMakeRotation(M_PI_2);
-        
-        [self.contentView addSubview:self.imageView];
+        [self.contentView addSubview:self.nameLabel];
         
     }
     return self;

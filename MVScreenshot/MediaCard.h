@@ -10,8 +10,8 @@
 
 @interface MediaCard : NSObject
 
-@property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy  ) NSString *name;
 
-@property (nonatomic,strong) UIImage *reviewImage;
+@property (nonatomic,strong) UIImage  *reviewImage;
 
 @end

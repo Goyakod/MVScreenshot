@@ -10,7 +10,9 @@
 
 @interface ViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UITableView *videosTableView;
+@property (strong, nonatomic) UIButton    *cameraButton;
+
+@property (strong, nonatomic) UITableView *videosTableView;
 
 @end
 
