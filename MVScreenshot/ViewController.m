@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import <MediaPlayer/MediaPlayer.h>
+//#import <MediaPlayer/MediaPlayer.h>
 #import "MediaCard.h"
 #import "MediaCardCell.h"
 
@@ -66,11 +66,15 @@
  */
 - (void)cameraButtonPress:(UIButton *)sender {
     
+    //实例化一个对象
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
-    imagePicker.allowsEditing = NO;
-    imagePicker.delegate = self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;//设置照片源类型
+    imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];//设置媒体种类
+    imagePicker.allowsEditing = NO; //允许编辑
+    imagePicker.cameraFlashMode = UIImagePickerControllerCameraFlashModeAuto;//闪光灯模式
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;//摄像头前置还是后置
+    imagePicker.delegate = self;//设置代理
+    //通过模态视图推出页面
     [self presentViewController:imagePicker animated:YES completion:nil];
     
 }
@@ -85,8 +89,10 @@
 - (UIImage *)getScreenShotImageFromVideoPath:(NSString *)filePath{
     
     UIImage *shotImage;
+    //视频路径URL
+    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
     
-    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:filePath] options:nil];
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:fileURL options:nil];
     
     AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
     
@@ -120,7 +126,9 @@
     
     MediaCard *card = [[MediaCard alloc] init];
     card.name = cfuuidString;
-    
+    /**
+     *  判断是视频还是照片
+     */
     if ([info[@"UIImagePickerControllerMediaType"] isEqualToString:@"public.image"]) {
         
         NSString *filePath = [NSString stringWithFormat:@"%@/%@.png",directPath,cfuuidString];
@@ -172,7 +180,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
-        
         return _imageArray.count;
     }
     return _videoArray.count;
